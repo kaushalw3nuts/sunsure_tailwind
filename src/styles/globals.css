@@ -2,26 +2,115 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+* { box-sizing: border-box; padding: 0; margin: 0; }
+
+html { scroll-behavior: auto !important; }
+
+body { @apply bg-black_bg m-0 p-0 font-anek_latin not-italic text-14 text-white_txt font-normal }
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+
+textarea { @apply resize-none }
+
+input, select, textarea, button { outline: none; box-shadow: none; font-family: inherit; }
+
+input[type=text]::-moz-placeholder,
+input[type=search]::-moz-placeholder,
+.input-text::-moz-placeholder,
+.input_text::-moz-placeholder {
+	color: inherit;
+	opacity: 1;
+	font-family: inherit;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+input[type=text]::-webkit-input-placeholder,
+input[type=search]::-webkit-input-p,
+.input-text::-webkit-input-placeholder,
+.input_text::-webkit-input-placeholder {
+	color: inherit;
+	opacity: 1;
+	font-family: inherit;
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+input[type=text]::-ms-placeholder,
+input[type=search]::-ms-placeholder,
+.input-text::-ms-placeholder,
+.input_text::-ms-placeholder {
+	color: inherit;
+	opacity: 1;
+	font-family: inherit;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+input[type=email]::-moz-placeholder {
+	color: inherit;
+	opacity: 1;
+	font-family: inherit;
 }
+
+input[type=email]::-webkit-input-placeholder {
+	color: inherit;
+	opacity: 1;
+	font-family: inherit;
+}
+
+input[type=email]::-ms-placeholder {
+	color: inherit;
+	opacity: 1;
+	font-family: inherit;
+}
+
+textarea::-moz-placeholder {
+	color: inherit;
+	opacity: 1;
+	font-family: inherit;
+}
+
+textarea::-webkit-input-placeholder {
+	color: inherit;
+	opacity: 1;
+	font-family: inherit;
+}
+
+textarea::-ms-input-placeholder {
+	color: inherit;
+	opacity: 1;
+	font-family: inherit;
+}
+
+button,
+input[type="submit"],
+a { @apply no-underline ease-in-out duration-300 transition-all }
+
+button,
+input[type="submit"],
+a { outline: none !important; }
+
+a:hover { @apply no-underline }
+
+h1, h2, h3, h4, h5, h6, p { @apply m-0 p-0 }
+
+ul li { @apply list-none }
+
+body.open_nav { @apply overflow-hidden }
+
+.main_wrap { @apply overflow-hidden }
+
+
+.menu_btn a:hover:after { left: calc(100% - 20px - 10px); }
+.navigation_main .menu_btn { @apply pl-10 }
+
+
+.ham-menu-btn span::before,
+.ham-menu-btn span::after { -webkit-transition-duration: .3s, .3s; transition-duration: .3s, .3s; -webkit-transition-delay: .15s, 0s; transition-delay: .15s, 0s; }
+.ham-menu-btn span::before { -webkit-transition-property: top, transform; transition-property: top, transform; }
+.ham-menu-btn span::after { -webkit-transition-property: bottom, transform; transition-property: bottom, transform; }
+.ham-menu-btn.active span { background: none !important; }
+.ham-menu-btn.active span::before,
+.ham-menu-btn.active span::after { -webkit-transition-delay: 0s, .15s; transition-delay: 0s, .2s; }
+.ham-menu-btn.active span::before { @apply top-0 -rotate-45 }
+.ham-menu-btn.active span::after { @apply bottom-0 rotate-45 }
+header.sticky .ham-menu-btn span{ @apply bg-black_bg } 
+header.sticky .ham-menu-btn span::before,
+header.sticky .ham-menu-btn span::after { @apply bg-black_bg }
+.ham-menu-btn.active span::after { @apply w-full }
