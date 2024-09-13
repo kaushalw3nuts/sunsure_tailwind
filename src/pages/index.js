@@ -1,4 +1,6 @@
 import Head from "next/head";
+import HomeBanner from "@/components/layout/HomeBanner";
+import HomeAbout from "@/components/HomeAbout";
 
 
 export default function Home() {
@@ -11,6 +13,8 @@ export default function Home() {
         <title>Homepage</title>
         <link rel="shortcut icon" href="/favicon.png" type="image/x-icon" />
       </Head>
+      <HomeBanner />
+      <HomeAbout />
     </>
   );
 }

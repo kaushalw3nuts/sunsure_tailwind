@@ -34,6 +34,7 @@ module.exports = {
 	      gray_txt: "#F2F3F1",
         rgbaWhite_txt: "rgba(255, 255, 255, 0.15)",
         rgbaWhite_txt_01: "rgba(255, 255, 255, 0.1)",
+        rgba_txt_01: "rgba(37, 35, 36, 0.1)",
 
         white_bg: "#FFFFFF",
         black_dark_bg: "#000000",
@@ -46,6 +47,10 @@ module.exports = {
 	      gray_bg: "#F2F3F1",
         rgbaWhite_bg: "rgba(255, 255, 255, 0.15)",
         rgbaWhite_bg_01: "rgba(255, 255, 255, 0.1)",
+        rgba_bg_01: "rgba(37, 35, 36, 0.1)",
+      },
+      backgroundImage: {
+        "gradient-linear": "linear-gradient(74deg,rgba(37,35,36,.6) 10.35%,rgba(37,35,36,0) 68.52%)",
       },
       fontSize: {
         h1: ["80px", "107.5%"],

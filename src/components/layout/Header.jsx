@@ -7,7 +7,7 @@ import instagram from "@/assets/images/instagram-icon.svg";
 import twiter from "@/assets/images/twiter-icon.svg";
 import facebook from "@/assets/images/facebook-icon.svg";
 import PrimaryBtn from "./PrimaryBtn";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 
 const Header = () => {
@@ -68,9 +68,17 @@ const Header = () => {
 
 	const activeRoute = useRouter();
 
+	const [onScroll, setScroll] = useState(false);
+	useEffect(() => {
+		const scrollHandle = () => {
+			setScroll(window.scrollY > 1);
+		}
+		window.addEventListener('scroll', scrollHandle);
+	}, []);
+
 	return (
 		<>
-			<header className="header fixed top-0 left-0 z-[999] w-full py-6 transition-all duration-300 ease-in-out border-b border-solid border-rgbaWhite_bg">
+			<header className={`header fixed top-0 left-0 z-[999] w-full py-6 transition-all duration-300 ease-in-out border-b border-solid border-rgbaWhite_bg ${onScroll ? 'sticky_header' : ''}`}>
 				<div className="container">
 					<div className="header_inner flex justify-between items-center w-full ">
 						<div className="logo relative flex">
