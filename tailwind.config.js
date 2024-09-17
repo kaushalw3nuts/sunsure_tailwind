@@ -35,6 +35,8 @@ module.exports = {
         rgbaWhite_txt: "rgba(255, 255, 255, 0.15)",
         rgbaWhite_txt_01: "rgba(255, 255, 255, 0.1)",
         rgba_txt_01: "rgba(37, 35, 36, 0.1)",
+        gray_txt_01: "#878787",
+        gray_txt_02: "#646464",
 
         white_bg: "#FFFFFF",
         black_dark_bg: "#000000",
@@ -48,6 +50,8 @@ module.exports = {
         rgbaWhite_bg: "rgba(255, 255, 255, 0.15)",
         rgbaWhite_bg_01: "rgba(255, 255, 255, 0.1)",
         rgba_bg_01: "rgba(37, 35, 36, 0.1)",
+        gray_bg_01: "#878787",
+        gray_bg_02: "#646464",
       },
       backgroundImage: {
         "gradient-linear": "linear-gradient(74deg,rgba(37,35,36,.6) 10.35%,rgba(37,35,36,0) 68.52%)",

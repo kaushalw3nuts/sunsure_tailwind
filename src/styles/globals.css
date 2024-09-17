@@ -129,3 +129,11 @@ header.sticky .ham-menu-btn span::after { @apply bg-black_bg }
 .home_banner_wapper .switer_btn .group svg path { @apply transition-all duration-300 ease-in-out }
 .home_banner_wapper .switer_btn .group svg:hover path { @apply stroke-orange_bg }
 .home_banner_txt .menu_btn { @apply pt-[142px] }
+
+
+.home_about_left .section_title .menu_btn { @apply pt-[18px] }
+.home_about_left .section_title .menu_btn a { @apply bg-transparent rounded-none min-h-[auto] text-orange_txt pt-[2px] pr-0 pl-5 after:bg-orange_bg after:left-0 hover:pr-5 hover:pl-0 }
+.home_about_left .section_title .menu_btn a:hover:after { left: calc(100% - 10px); }
+.home_about_inner .home_about_center { width: calc(100% - 340px - 292px); }
+.about_count_top .about_count_number { width: calc(100% - 47px); }
+.about_count_box + .about_count_box { @apply pt-6 mt-6 border-t border-solid border-gray_bg_02 }
