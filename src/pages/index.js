@@ -2,6 +2,7 @@ import Head from "next/head";
 import HomeBanner from "@/components/layout/HomeBanner";
 import HomeAbout from "@/components/HomeAbout";
 import MakingSection from "@/components/MakingSection";
+import StateDemo from "@/components/StateDemo";
 
 
 export default function Home() {
@@ -18,6 +19,7 @@ export default function Home() {
       <HomeBanner />
       <HomeAbout />
       <MakingSection />
+      <StateDemo />
     </>
   );
 }
