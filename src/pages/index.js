@@ -3,6 +3,7 @@ import HomeBanner from "@/components/layout/HomeBanner";
 import HomeAbout from "@/components/HomeAbout";
 import MakingSection from "@/components/MakingSection";
 import StateDemo from "@/components/StateDemo";
+import RefDemo from "@/components/RefDemo";
 
 
 export default function Home() {
@@ -20,6 +21,7 @@ export default function Home() {
       <HomeAbout />
       <MakingSection />
       <StateDemo />
+      <RefDemo />
     </>
   );
 }
