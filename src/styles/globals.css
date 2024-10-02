@@ -99,12 +99,13 @@ body.open_nav { @apply overflow-hidden }
 
 .menu_btn a:hover:after { left: calc(100% - 20px - 10px); }
 .navigation_main .menu_btn { @apply pl-10 }
+.navigation_main .main-menu li.active a { @apply text-orange_txt }
+.navigation_main .main-menu li.active a::before { @apply opacity-100 visible }
 
 
-.sticky_header { @apply bg-white_bg }
+.sticky_header { @apply bg-black_bg }
 .sticky_header .logo .defult_logo { @apply opacity-0 invisible }
 .sticky_header .logo .stiky_logo { @apply opacity-100 visible }
-.sticky_header .main-menu li a { @apply text-black_txt }
 .sticky_header .main-menu li a:hover { @apply text-orange_txt }
 
 
@@ -137,3 +138,9 @@ header.sticky .ham-menu-btn span::after { @apply bg-black_bg }
 .home_about_inner .home_about_center { width: calc(100% - 340px - 292px); }
 .about_count_top .about_count_number { width: calc(100% - 47px); }
 .about_count_box + .about_count_box { @apply pt-6 mt-6 border-t border-solid border-gray_bg_02 }
+
+
+.section .error { text-shadow: 1px 1px 1px #00593E, 2px 2px 1px #00593E, 3px 3px 1px #00593E, 4px 4px 1px #00593E, 5px 5px 1px #00593E, 6px 6px 1px #00593E, 7px 7px 1px #00593E, 8px 8px 1px #00593E, 25px 25px 8px rgba(0,0,0, 0.2); }
+
+
+.footer_top { background-image: url(../assets/images/footer_top_bg_img.jpg); }
