@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import axios from "axios";
 
 const ApiDemo = () => {
 
@@ -10,9 +11,18 @@ const ApiDemo = () => {
 	}, []);
 	
 	const test = async () => {
-		try {
-			const response = await fetch('https://fakestoreapi.com/products');
-			const data = await response.json();
+		// try {
+		// 	const response = await fetch('https://fakestoreapi.com/products');
+		// 	const data = await response.json();
+		// 	setPhotos(data);
+		// }
+		// catch(error) {
+		// 	console.log(error);
+		// }
+		
+		try{
+			const response = await axios.get('https://fakestoreapi.com/products');
+			const data = await response.data;
 			setPhotos(data);
 		}
 		catch(error) {

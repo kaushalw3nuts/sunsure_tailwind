@@ -144,3 +144,5 @@ header.sticky .ham-menu-btn span::after { @apply bg-black_bg }
 
 
 .footer_top { background-image: url(../assets/images/footer_top_bg_img.jpg); }
+.footer_top .footer_top_right .menu_btn { @apply pt-[30px] }
+.f_menu.f_menu_3 { width: calc(100% - 37% - 28%); }
