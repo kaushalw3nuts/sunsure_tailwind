@@ -5,6 +5,7 @@ import axios from "axios";
 const ApiDemo = () => {
 
 	const [photos, setPhotos] = useState([]);
+	const [load, setLoad] = useState(false);
 
 	useEffect(()=> {
 		test();
@@ -20,13 +21,17 @@ const ApiDemo = () => {
 		// 	console.log(error);
 		// }
 		
-		try{
+		try {
+			setLoad(true);
 			const response = await axios.get('https://fakestoreapi.com/products');
 			const data = await response.data;
 			setPhotos(data);
 		}
 		catch(error) {
 			console.log(error);
+		}
+		finally {
+			setLoad(false);
 		}
 	}
 
@@ -35,6 +40,7 @@ const ApiDemo = () => {
 			<div className="about block relative mt-20 mb-52">
 				<div className="container">
 					<h2 className="text-h2 text-center font-medium">ApiDemo</h2>
+					{ load && <span className="text-center text-h4 text-white_txt flex justify-center mt-10 uppercase">Loading...</span> }
 					<div className="mt-10 w-full grid grid-cols-3 gap-x-6 gap-y-8">
 						{photos.splice(0, 6).map((productDetail, index) => {
 							const {title, image, description} = productDetail;
