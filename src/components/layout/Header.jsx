@@ -99,7 +99,7 @@ const Header = () => {
 									)
 								})}
 							</ul>
-							<PrimaryBtn redirectLink="#" btnTxt="Contact Us" />
+							<PrimaryBtn redirectLink="/contact" btnTxt="Contact Us" />
 							<div className="f_social_wrap ml-auto hidden">
 								<ul className="f_social flex -mx-[5px] gap-y-[10px] pt-[6px]">
 									{SocialIcon.map((socialLinkBar, index) => {

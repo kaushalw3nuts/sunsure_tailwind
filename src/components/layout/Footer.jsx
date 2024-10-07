@@ -88,7 +88,7 @@ const Footer = () => {
 						</div>
 						<div className="footer_top_right w-1/2 pl-[15px]">
 							<p className="text-white_txt font-normal text-p">We help you from conceptualizing your solar investment to commissioning of the asset and its operations over the complete lifetime - all from under one roof!</p>
-							<PrimaryBtn redirectLink="#" btnTxt="Contact Us" />
+							<PrimaryBtn redirectLink="/contact" btnTxt="Contact Us" />
 						</div>
 					</div>
 					<div className="footer_bottom w-full relative pt-[100px]">
